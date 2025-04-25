@@ -1,0 +1,9 @@
+FROM openjdk:21-jdk-slim
+
+WORKDIR /app
+
+COPY target/app.jar /app/app.jar
+
+EXPOSE 9795
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
